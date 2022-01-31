@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Encriptador</title>
+
+</head>
+<body>
+<h1> <i>MI PRIMER ENCRIPTADOR <i></h1>
+	<input id="entrada"type="text" size="50"/>
+	<button type ="submit" id ="encriptar">Encriptar</button>
+	<button type ="submit" id= "desencriptar" >Desencriptar</button>
+	<br><br><br>
+	Texto encriptado:<br>
+	<textarea id="encriptado"></textarea>
+<br><br><br>
+	Texto desencriptado:<br>
+	<textarea id="desencriptado"></textarea>
+</body>
+</html>
+
+<script>
+	
+	
+	function encriptar(elemento){
+		var input = document.querySelector("#entrada")
+		var palabra = input.value;
+		var codificado = btoa(palabra);
+		document.getElementById("encriptado").innerHTML = codificado;
+
+	}
+
+	var button = document.querySelector("#encriptar");
+
+	button.onclick = encriptar;
+	
+	function desencriptar(elemento){
+		var input = document.querySelector("input")
+		var palabra = document.getElementById("encriptado").innerHTML;
+		var codificado = atob(palabra);
+		document.getElementById("desencriptado").innerHTML = codificado;
+
+	}
+	var button = document.querySelector("#desencriptar");
+
+	button.onclick = desencriptar;
+	
+	
+		
+
+
+	
+	
+
+
+
+
+
+
+
+ 	
+
+</script>
